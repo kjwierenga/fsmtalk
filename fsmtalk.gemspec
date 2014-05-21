@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Fsmtalk::VERSION
   spec.authors       = ["Klaas Jan Wierenga"]
   spec.email         = ["k.j.wierenga@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Example use of different ruby State Machine implementations for my FSM talk.}
+  spec.summary       = spec.description # %q{TODO: Write a gem summary}
+  spec.homepage      = "https://github.com/kjwierenga/fsmtalk"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

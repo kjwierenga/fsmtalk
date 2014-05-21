@@ -1,6 +1,6 @@
 # Fsmtalk
 
-TODO: Write a gem description
+Example use of different ruby State Machine implementations for my FSM talk.
 
 ## Installation
 
@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Only using the gem structure. Currently we only have a couple of single file scripts in the examples directory.
+
+Example:
+
+```
+bundle exec ruby examples/finite_machine/phone.rb
+```
 
 ## Contributing
 
