@@ -11,12 +11,12 @@ phone = FiniteMachine.define do
 
     # Dialing
     event :digit,    :dialing => :dialing
-    event :off_hook, :dialing => :alerting
+    event :off_hook, :dialing => :off_hook
   }
 
   callbacks {
-    on_enter(:digit)    { |event, digit| digits << digit; puts "digit: #{digit}" }
-    on_enter(:off_hook) { |event| puts "Dialling #{digits.join}" }
+    on_before(:digit)   { |event, digit| digits << digit; puts "digit: #{digit}" }
+    on_after(:off_hook) { |event| puts "Dialed #{digits.join}" }
 
     on_transition { |event|
       puts "%s [ %s -> %s ]" %

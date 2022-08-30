@@ -43,11 +43,11 @@ phone = FiniteMachine.define do
   }
 
   callbacks {
-    on_enter(:on_hook)  { digits = [] }
-    on_enter(:digit)    { |_, digit| digits << digit }
-    on_enter(:off_hook) { dial }
+    on_before(:on_hook)  { digits = [] }
+    on_before(:digit)    { |_, digit| digits << digit }
+    on_before(:off_hook) { dial }
 
-    on_exit_state { |event|
+    on_exit { |event|
       puts "%s [ %s -> %s ]" %
         [event.name, event.from.capitalize, event.to.capitalize]
     }
